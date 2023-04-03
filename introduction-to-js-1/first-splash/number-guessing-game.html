@@ -47,7 +47,7 @@
 
     <script>
 
-      let randomNumber = Math.floor(Math.random() * 100) + 1;
+      let randomNumber = Math.floor(Math.random() * 99) + 1;
 
       const guesses = document.querySelector('.guesses');
       const lastResult = document.querySelector('.lastResult');
@@ -62,7 +62,7 @@
       function checkGuess() {
         const userGuess = Number(guessField.value);
 
-        if (userGuess <= 0 || userGuess >= 100) {
+        if (userGuess <= 0 || userGuess > 100) {
           alert('Only guesses between 1-100 are vaild');
           lowHi.textContent = '';
           guessField.value = '';
